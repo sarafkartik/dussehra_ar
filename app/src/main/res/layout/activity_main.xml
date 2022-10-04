@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <io.github.sceneview.ar.ArSceneView
+            android:id="@+id/scene"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <FrameLayout
+            android:id="@+id/shootbutton"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:visibility="gone"
+            android:elevation="80dp"
+            android:padding="30dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bow"
+            android:layout_marginBottom="20dp" />
+
+        <FrameLayout
+            android:id="@+id/ending_frame"
+            android:visibility="gone"
+            android:elevation="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/black"
+            >
+
+            <ImageView
+                android:id="@+id/iv_fireworks"
+                android:src="@drawable/archery"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="विजयदशमी की शुभकामनाऐं!\nजय श्री राम"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
